@@ -3,6 +3,20 @@ require('dotenv').config();
 
 const DISCORD_TOKEN = process.env.DISCORD_TOKEN;
 
+// fake server for render port trouble
+const express = require('express');
+const app = express();
+
+const PORT = process.env.PORT || 3000; // Render définit généralement une variable d'environnement PORT
+app.get('/', (req, res) => {
+    res.send('Le bot Discord fonctionne.');
+});
+
+app.listen(PORT, () => {
+    console.log(`Serveur HTTP en écoute sur le port ${PORT}`);
+});
+
+
 console.log(Client, GatewayIntentBits);
 
 const client = new Client({
