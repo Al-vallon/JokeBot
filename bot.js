@@ -90,7 +90,7 @@ client.once('ready', () => {
     // Send jokes every 15 minutes
     setInterval(() => {
         sendRandomJoke();
-    }, 3600000);
+    }, 10 800 000);
 });
 
 // Connect the bot
