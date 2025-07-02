@@ -8,4 +8,4 @@ jobs:
     steps:
       - name: Send HTTP request
         run: |
-          curl -X GET https://your-bot-url.onrender.com
+          curl -X GET https://jokebot-axml.onrender.com
